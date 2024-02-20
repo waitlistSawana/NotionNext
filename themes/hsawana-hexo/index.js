@@ -32,6 +32,8 @@ import { Style } from './style'
 import replaceSearchResult from '@/components/Mark'
 import { siteConfig } from '@/lib/config'
 import AlgoliaSearchModal from '@/components/AlgoliaSearchModal'
+import CategoryBar from './components/CategoryBar'
+import TagGroups from './components/TagGroups'
 
 // 主题全局状态
 const ThemeGlobalHexo = createContext()
