@@ -32,7 +32,7 @@ import { Style } from './style'
 import replaceSearchResult from '@/components/Mark'
 import { siteConfig } from '@/lib/config'
 import AlgoliaSearchModal from '@/components/AlgoliaSearchModal'
-import CategoryBar from '../heo/components/CategoryBar'
+import CategoryBar from './components/CategoryBar'
 import TagGroups from './components/TagGroups'
 
 // 主题全局状态
@@ -158,7 +158,7 @@ const LayoutIndex = (props) => {
  */
 const LayoutPostList = (props) => {
   return <div className='pt-8'>
-        {/* <CategoryBar {...props} /> */}
+        <CategoryBar {...props} />
         <div className="mb-2">
           <TagGroups tags={props.tagOptions} currentTag={props.tag} />
         </div>
