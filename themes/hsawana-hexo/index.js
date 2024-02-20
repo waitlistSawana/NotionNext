@@ -158,7 +158,7 @@ const LayoutIndex = (props) => {
  */
 const LayoutPostList = (props) => {
   return <div className='pt-8'>
-        <CategoryBar {...props} />
+        {/* <CategoryBar {...props} /> */}
         <div className="mb-2">
           <TagGroups tags={props.tagOptions} currentTag={props.tag} />
         </div>
