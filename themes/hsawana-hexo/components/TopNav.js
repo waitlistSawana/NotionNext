@@ -78,10 +78,12 @@ const TopNav = props => {
       nav && nav.classList.replace('text-white', 'text-black')
     }
 
-    // 导航栏不在头图里，且页面向下滚动一定程度 隐藏导航栏
+    // 导航栏不在头图里，且页面向下滚动一定程度 隐藏导航栏 
     const showNav = scrollS <= windowTop || scrollS < 5 || (header && scrollS <= header.clientHeight + 100)
     if (!showNav) {
-      nav && nav.classList.replace('top-0', '-top-20')
+      // nav && nav.classList.replace('top-0', '-top-20') //不要这个 
+      // windowTop = scrollS
+      nav && nav.classList.replace('-top-20', 'top-0')
       windowTop = scrollS
     } else {
       nav && nav.classList.replace('-top-20', 'top-0')
