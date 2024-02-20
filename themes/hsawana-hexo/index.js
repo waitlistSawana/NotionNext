@@ -156,6 +156,10 @@ const LayoutIndex = (props) => {
  */
 const LayoutPostList = (props) => {
   return <div className='pt-8'>
+        <CategoryBar {...props} />
+        <div className="mb-2">
+          <TagGroups tags={props.tagOptions} currentTag={props.tag} />
+        </div>
         <SlotBar {...props} />
         {siteConfig('POST_LIST_STYLE') === 'page' ? <BlogPostListPage {...props} /> : <BlogPostListScroll {...props} />}
     </div>
