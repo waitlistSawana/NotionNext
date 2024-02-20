@@ -139,15 +139,15 @@ const LayoutBase = props => {
   )
 }
 
-/**
- * 首页
- * 是一个博客列表，嵌入一个Hero大图
- * @param {*} props
- * @returns
- */
-const LayoutIndex = (props) => {
-  return <LayoutPostList {...props} className='pt-8' />
-}
+// /**
+//  * 首页
+//  * 是一个博客列表，嵌入一个Hero大图
+//  * @param {*} props
+//  * @returns
+//  */
+// const LayoutIndex = (props) => {
+//   return <LayoutPostList {...props} className='pt-8' />
+// }
 
 /**
  * 博客列表
