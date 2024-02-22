@@ -81,10 +81,8 @@ const LayoutBase = props => {
 
             {/* 顶部导航 */}
             {/* <TopNav {...props} /> */}
-            <header> 
               {/* 顶部导航 - 来自heo */}
-              <NavBar {...props} />
-            </header>
+            <NavBar {...props} />
 
             {/* 顶部嵌入 - 含大图 */}
             {/* <Transition
