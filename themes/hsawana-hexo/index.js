@@ -141,15 +141,15 @@ const LayoutBase = props => {
   )
 }
 
-/**
- * 首页
- * 是一个博客列表，嵌入一个Hero大图
- * @param {*} props
- * @returns
- */
-const LayoutIndex = (props) => {
-  return <LayoutPostList {...props} className='pt-8' />
-}
+// /**
+//  * 首页 （注释掉是因为不想用
+//  * 是一个博客列表，嵌入一个Hero大图
+//  * @param {*} props
+//  * @returns
+//  */
+// const LayoutIndex = (props) => {
+//   return <LayoutPostList {...props} className='pt-8' />
+// }
 
 /**
  * 博客列表
@@ -358,7 +358,7 @@ const LayoutTagIndex = props => {
 export {
   CONFIG as THEME_CONFIG,
   LayoutBase,
-  LayoutIndex,
+  // LayoutIndex, //首页大图
   LayoutSearch,
   LayoutArchive,
   LayoutSlug,
