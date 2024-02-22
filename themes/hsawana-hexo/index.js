@@ -50,7 +50,7 @@ const LayoutBase = props => {
   const { post, children, slotTop, className } = props
   const { onLoading, fullWidth } = useGlobal()
 
-  const router = useRouter()
+  // const router = useRouter()
   // const headerSlot = post  //大图位置
   //   ? <PostHeader {...props} />
   //   : (router.route === '/' && siteConfig('HEXO_HOME_BANNER_ENABLE', null, CONFIG)
@@ -80,7 +80,7 @@ const LayoutBase = props => {
             <Style/>
 
             {/* 顶部导航 */}
-            <TopNav {...props} />
+            {/* <TopNav {...props} /> */}
             <header> 
               {/* 顶部导航 - 来自heo */}
               <NavBar {...props} />
