@@ -34,6 +34,7 @@ import { siteConfig } from '@/lib/config'
 import AlgoliaSearchModal from '@/components/AlgoliaSearchModal'
 import CategoryBar from './components/CategoryBar'
 import TagGroups from './components/TagGroups'
+import NavBar from './components/NavBar'
 
 // 主题全局状态
 const ThemeGlobalHexo = createContext()
