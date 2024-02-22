@@ -50,11 +50,11 @@ const LayoutBase = props => {
   const { onLoading, fullWidth } = useGlobal()
 
   const router = useRouter()
-  const headerSlot = post
-    ? <PostHeader {...props} />
-    : (router.route === '/' && siteConfig('HEXO_HOME_BANNER_ENABLE', null, CONFIG)
-        ? <Hero {...props} />
-        : null)
+  // const headerSlot = post  //大图位置
+  //   ? <PostHeader {...props} />
+  //   : (router.route === '/' && siteConfig('HEXO_HOME_BANNER_ENABLE', null, CONFIG)
+  //       ? <Hero {...props} />
+  //       : null)
 
   const drawerRight = useRef(null)
   const tocRef = isBrowser ? document.getElementById('article-wrapper') : null
@@ -81,8 +81,8 @@ const LayoutBase = props => {
             {/* 顶部导航 */}
             <TopNav {...props} />
 
-            {/* 顶部嵌入 */}
-            <Transition
+            {/* 顶部嵌入 - 含大图 */}
+            {/* <Transition
                 show={!onLoading}
                 appear={true}
                 enter="transition ease-in-out duration-700 transform order-first"
@@ -94,7 +94,7 @@ const LayoutBase = props => {
                 unmount={false}
             >
                 {headerSlot}
-            </Transition>
+            </Transition> */}
 
             {/* 主区块 */}
             <main id="wrapper" className={`${siteConfig('HEXO_HOME_BANNER_ENABLE', null, CONFIG) ? '' : 'pt-16'} bg-hexo-background-gray dark:bg-black w-full py-8 md:px-8 lg:px-24 min-h-screen relative`}>
@@ -141,15 +141,15 @@ const LayoutBase = props => {
   )
 }
 
-// /**
-//  * 首页 （注释掉是因为不想用
-//  * 是一个博客列表，嵌入一个Hero大图
-//  * @param {*} props
-//  * @returns
-//  */
-// const LayoutIndex = (props) => {
-//   return <LayoutPostList {...props} className='pt-8' />
-// }
+/**
+ * 首页
+ * 是一个博客列表，嵌入一个Hero大图
+ * @param {*} props
+ * @returns
+ */
+const LayoutIndex = (props) => {
+  return <LayoutPostList {...props} className='pt-8' />
+}
 
 /**
  * 博客列表
@@ -358,7 +358,7 @@ const LayoutTagIndex = props => {
 export {
   CONFIG as THEME_CONFIG,
   LayoutBase,
-  // LayoutIndex, //首页大图
+  LayoutIndex,
   LayoutSearch,
   LayoutArchive,
   LayoutSlug,
